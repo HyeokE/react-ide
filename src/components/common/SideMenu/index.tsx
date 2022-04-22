@@ -23,28 +23,23 @@ const ProjectName = styled.div`
 
 const directoryStructure = [
   {
-    folderName: 'src',
-    folderColor: theme.colors.googleBlue,
-    fileInfo: ['index.tsx', 'App.tsx'],
-  },
-  {
     folderName: 'aboutMe',
-    folderColor: theme.colors.googleGreen,
+    folderColor: theme.colors.red400,
     fileInfo: ['June.tsx', 'Sohui.tsx'],
   },
   {
     folderName: 'projects',
-    folderColor: theme.colors.googleRed,
+    folderColor: theme.colors.yellow400,
     fileInfo: ['June.tsx'],
   },
   {
     folderName: 'experience',
-    folderColor: theme.colors.googleYellow,
+    folderColor: theme.colors.green400,
     fileInfo: ['June.tsx'],
   },
   {
     folderName: 'communication',
-    folderColor: theme.colors.tossBlue,
+    folderColor: theme.colors.blue400,
     fileInfo: ['June.tsx'],
   },
 ];
