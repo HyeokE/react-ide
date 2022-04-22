@@ -23,9 +23,8 @@ yarn build
 
 ## Setting
 
------
 
-### 1.
+### 1. 폴더구조 지정
 
 `data/directoryStructure.ts`에서 폴더구조 / 폴더색상을 설정지정할 수 있습니다.
 
@@ -48,7 +47,7 @@ export const directoryStructure = [
 ];
 ```
 
-### 2. 
+### 2. Route 지정
 
 `Layout/index.tsx`에서 route를 설정할 수 있습니다.
 
