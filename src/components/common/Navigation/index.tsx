@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import { theme } from '../../../styles/theme';
 
 const NavigationWrapper = styled.div`
   position: relative;
@@ -54,28 +55,34 @@ const NavigationButtonWrapper = styled.div`
   align-items: center;
   height: 30px;
 `;
-const NavigationButton = styled.div`
-  height: 14px;
-  width: 14px;
+const NavigationButton = styled.div<{ background: keyof typeof theme.colors }>`
+  height: 12px;
+  width: 12px;
   border-radius: 10px;
-  margin-right: 5px;
   margin-left: 10px;
-  background: ${({ theme }) => theme.colors.red400};
+  ${({ background }) =>
+    background &&
+    css`
+      background: ${({ theme }) => theme.colors[background]};
+    `}
   cursor: pointer;
 `;
 
 const Navigation = () => {
   const location = useLocation();
   const path = location.pathname.slice(1).split('/');
+  const fileName = path[path.length - 1];
 
   return (
     <NavigationWrapper>
       <NavigationButtonWrapper>
-        <NavigationButton />
-        <NavigationButton />
-        <NavigationButton />
+        <NavigationButton background={'red500'} />
+        <NavigationButton background={'yellow500'} />
+        <NavigationButton background={'green500'} />
       </NavigationButtonWrapper>
-      <NavigationTop>JunHyeok-Portfolio - Home.tsx</NavigationTop>
+      <NavigationTop>
+        JunHyeok-Portfolio {fileName.includes('.') && ` - ${fileName}`}
+      </NavigationTop>
       <BreadCrumbWrapper>
         JunHyeok-Portfolio
         {path.map((data, id) => (
