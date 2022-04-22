@@ -59,7 +59,7 @@ const NavigationButton = styled.div<{ background: keyof typeof theme.colors }>`
   height: 12px;
   width: 12px;
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 8px;
   ${({ background }) =>
     background &&
     css`
