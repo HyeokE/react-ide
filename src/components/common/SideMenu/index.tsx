@@ -44,7 +44,7 @@ const directoryStructure = [
   },
   {
     folderName: 'Contact',
-    folderColor: theme.colors.blue400,
+    folderColor: '#CE93D8',
     fileInfo: ['index.tsx'],
   },
 ];
