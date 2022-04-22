@@ -3,6 +3,7 @@ import Arrow from '../../../assets/Arrow.png';
 import styled, { css } from 'styled-components';
 import File from '../File';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Folder from '../../../assets/Folder';
 const SideComponent = styled.div`
   font-size: ${({ theme }) => theme.fontSize.body1};
   padding: 10px 0;
@@ -40,6 +41,7 @@ const Directory: React.FC<{ folderName: string; fileInfo: string[] }> = ({
         }}
       >
         <ArrowImage src={Arrow} isOpen={path} />
+        <Folder color={'#fff'} />
         {folderName}
       </SideComponent>
       <FileWrapper>
