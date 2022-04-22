@@ -21,6 +21,10 @@ const ProjectName = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+const License = styled.div`
+  color: ${({ theme }) => theme.colors.grey400};
+  font-size: ${({ theme }) => theme.fontSize.body1};
+`;
 
 const SideMenu = () => {
   return (
@@ -29,6 +33,7 @@ const SideMenu = () => {
       {directoryStructure.map((data, id) => (
         <Directory key={id} {...data} />
       ))}
+      <License>© 2022. JunHyeok</License>
     </SideMenuWrapper>
   );
 };
