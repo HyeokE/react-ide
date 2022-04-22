@@ -16,6 +16,7 @@ const SideComponent = styled.div`
     background: #30363f;
     color: ${({ theme }) => theme.colors.white};
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
   }
 `;
 const ArrowImage = styled.img<{ isOpen: boolean }>`

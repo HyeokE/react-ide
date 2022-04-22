@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Directory from '../Directory';
 import { theme } from '../../../styles/theme';
+import { directoryStructure } from '../../../datas/directoryStructure';
 
 const SideMenuWrapper = styled.div`
   resize: horizontal;
   height: 100%;
   width: 250px;
-
   padding: 0 10px;
   color: ${({ theme }) => theme.colors.grey400};
   box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.3);
@@ -21,34 +21,6 @@ const ProjectName = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
-const directoryStructure = [
-  {
-    folderName: 'aboutMe',
-    folderColor: theme.colors.red400,
-    fileInfo: ['JunHyeok.tsx'],
-  },
-  {
-    folderName: 'projects',
-    folderColor: theme.colors.yellow400,
-    fileInfo: ['DevFest.tsx', 'GDSC-DJU.tsx', 'GDSC-Tech-Blog.tsx', 'OZET.tsx'],
-  },
-  {
-    folderName: 'experience',
-    folderColor: theme.colors.green400,
-    fileInfo: ['GoogleDSC.tsx'],
-  },
-  {
-    folderName: 'communication',
-    folderColor: theme.colors.blue400,
-    fileInfo: ['Responsability.tsx', 'Resume.tsx'],
-  },
-  {
-    folderName: 'Contact',
-    folderColor: '#CE93D8',
-    fileInfo: ['index.tsx'],
-  },
-];
 
 const SideMenu = () => {
   return (

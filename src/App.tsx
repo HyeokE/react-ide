@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
 import Navigation from './components/common/Navigation';
 import SideMenu from './components/common/SideMenu';
-import { Route, Routes } from 'react-router-dom';
-import AboutMe from './components/pages/AboutMe';
+import Layout from './Layout';
 
 export const Container = styled.main`
   height: calc(100vh - 70px);
@@ -22,9 +20,7 @@ function App() {
       <Navigation />
       <ElementWrapper>
         <SideMenu />
-        <Routes>
-          <Route path={'/*'} element={<AboutMe />} />
-        </Routes>
+        <Layout />
       </ElementWrapper>
     </Container>
   );

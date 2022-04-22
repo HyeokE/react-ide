@@ -15,6 +15,7 @@ const FileWrapper = styled.div`
     background: #30363f;
     color: ${({ theme }) => theme.colors.white};
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
   }
 `;
 
@@ -33,7 +34,7 @@ const File: React.FC<{ FileName: string; folderName: string }> = ({
   folderName,
 }) => {
   const navigate = useNavigate();
-  const PATHNAME_TO_LOWERCASE = `${folderName.toLowerCase()}/${FileName.toLowerCase()}`;
+  const PATHNAME_TO_LOWERCASE = `${folderName}/${FileName}`;
   return (
     <FileWrapper
       onClick={() => {
