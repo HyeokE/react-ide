@@ -6,7 +6,8 @@ import { theme } from '../../../styles/theme';
 const SideMenuWrapper = styled.div`
   resize: horizontal;
   height: 100%;
-  width: 200px;
+  width: 250px;
+
   padding: 0 10px;
   color: ${({ theme }) => theme.colors.grey400};
   box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.3);
