@@ -1,6 +1,13 @@
-## Portfolio
+# Portfolio
 
-### Getting started
+## Preview
+
+![Screen Shot 2022-04-22 at 11 50 52 PM](https://user-images.githubusercontent.com/61281239/164739322-d10c9310-f498-4615-b9b9-aaab16c41328.png)
+
+
+
+
+## Getting started
 ```angular2html
 yarn && yarn install
 ```
@@ -9,14 +16,16 @@ yarn && yarn install
 yarn start
 ```
 
-### Building
+## Building
 ```angular2html
 yarn build
 ```
 
-### Setting
+## Setting
 
 -----
+
+### 1.
 
 `data/directoryStructure.ts`에서 폴더구조 / 폴더색상을 설정지정할 수 있습니다.
 
@@ -38,6 +47,8 @@ export const directoryStructure = [
   },
 ];
 ```
+
+### 2. 
 
 `Layout/index.tsx`에서 route를 설정할 수 있습니다.
 
