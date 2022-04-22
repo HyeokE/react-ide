@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Arrow from '../../../assets/Arrow.png';
+import Directory from '../Directory';
 
 const SideMenuWrapper = styled.div`
   resize: horizontal;
@@ -8,24 +9,49 @@ const SideMenuWrapper = styled.div`
   padding: 0 10px;
   color: ${({ theme }) => theme.colors.grey400};
 `;
-const SideComponent = styled.div`
+
+const ProjectName = styled.div`
+  padding: 10px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.elementLayout};
   font-size: ${({ theme }) => theme.fontSize.body1};
-  padding: 10px 0px;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
 `;
-const ArrowImage = styled.img`
-  padding: 0 10px;
-`;
+const directoryStructure = [
+  {
+    folderName: 'src',
+    fileInfo: ['index.tsx', 'App.tsx'],
+  },
+  {
+    folderName: 'aboutMe',
+    fileInfo: ['June.tsx', 'Sohui.tsx'],
+  },
+  {
+    folderName: 'projects',
+    fileInfo: ['June.tsx'],
+  },
+  {
+    folderName: 'experience',
+    fileInfo: ['June.tsx'],
+  },
+  {
+    folderName: 'communication',
+    fileInfo: ['June.tsx'],
+  },
+];
 
 const SideMenu = () => {
   return (
     <SideMenuWrapper>
-      <SideComponent>
-        <ArrowImage src={Arrow} />
-        SideMenu
-      </SideComponent>
+      <ProjectName>Project Name</ProjectName>
+      {directoryStructure.map(({ folderName, fileInfo }) => (
+        <Directory
+          key={folderName}
+          folderName={folderName}
+          fileInfo={fileInfo}
+        />
+      ))}
     </SideMenuWrapper>
   );
 };
