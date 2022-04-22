@@ -7,18 +7,25 @@ import { Route, Routes } from 'react-router-dom';
 import AboutMe from './components/pages/AboutMe';
 
 export const Container = styled.main`
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100vw;
+`;
+export const ElementWrapper = styled.main`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 `;
 
 function App() {
   return (
     <Container>
       <Navigation />
-      <SideMenu />
-      <Routes>
-        <Route path={'/*'} element={<AboutMe />} />
-      </Routes>
+      <ElementWrapper>
+        <SideMenu />
+        <Routes>
+          <Route path={'/*'} element={<AboutMe />} />
+        </Routes>
+      </ElementWrapper>
     </Container>
   );
 }

@@ -6,6 +6,7 @@ const NavigationWrapper = styled.div`
   width: 100%;
   border-bottom: 0.5px solid ${({ theme }) => theme.colors.elementLayout};
 `;
+
 const NavigationTop = styled.div`
   height: 30px;
   width: 100%;

@@ -8,6 +8,7 @@ const SideMenuWrapper = styled.div`
   width: 200px;
   padding: 0 10px;
   color: ${({ theme }) => theme.colors.grey400};
+  box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.3);
 `;
 
 const ProjectName = styled.div`
@@ -18,6 +19,7 @@ const ProjectName = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+
 const directoryStructure = [
   {
     folderName: 'src',
