@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Arrow from '../../../assets/Arrow.png';
 import Directory from '../Directory';
 
 const SideMenuWrapper = styled.div`
   resize: horizontal;
   height: 100%;
+  width: 200px;
   padding: 0 10px;
   color: ${({ theme }) => theme.colors.grey400};
 `;

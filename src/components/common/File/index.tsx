@@ -10,6 +10,7 @@ const FileWrapper = styled.div`
   align-items: center;
   flex-direction: row;
   cursor: pointer;
+  user-select: none;
 `;
 
 const FileImage = styled.img`

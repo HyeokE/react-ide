@@ -57,6 +57,7 @@ export const googleLogoColor = {
 export const ideColor = {
   background: '#282C34',
   elementLayout: '#2F333D',
+  selected: '#e5c17c',
 };
 export const primaryColor = {
   ...assetGrey,
