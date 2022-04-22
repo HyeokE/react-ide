@@ -72,6 +72,7 @@ const Navigation = () => {
   const location = useLocation();
   const path = location.pathname.slice(1).split('/');
   const fileName = path[path.length - 1];
+  console.log(path);
 
   return (
     <NavigationWrapper>
@@ -85,12 +86,13 @@ const Navigation = () => {
       </NavigationTop>
       <BreadCrumbWrapper>
         JunHyeok-Portfolio
-        {path.map((data, id) => (
-          <BreadCrumbInner key={id}>
-            &gt;
-            <BreadCrumb last={id + 1 === path.length}>{data}</BreadCrumb>
-          </BreadCrumbInner>
-        ))}
+        {path[1] &&
+          path.map((data, id) => (
+            <BreadCrumbInner key={id}>
+              &gt;
+              <BreadCrumb last={id + 1 === path.length}>{data}</BreadCrumb>
+            </BreadCrumbInner>
+          ))}
       </BreadCrumbWrapper>
     </NavigationWrapper>
   );
