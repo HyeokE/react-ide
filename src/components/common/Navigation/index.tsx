@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
 const NavigationWrapper = styled.div`
+  position: relative;
   width: 100%;
   border-bottom: 0.5px solid ${({ theme }) => theme.colors.elementLayout};
 `;
@@ -46,12 +47,34 @@ const BreadCrumb = styled.div<{ last: boolean }>`
       color: ${({ theme }) => theme.colors.selected};
     `}
 `;
+const NavigationButtonWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+`;
+const NavigationButton = styled.div`
+  height: 14px;
+  width: 14px;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 10px;
+  background: ${({ theme }) => theme.colors.red400};
+  cursor: pointer;
+`;
 
 const Navigation = () => {
   const location = useLocation();
   const path = location.pathname.slice(1).split('/');
+
   return (
     <NavigationWrapper>
+      <NavigationButtonWrapper>
+        <NavigationButton />
+        <NavigationButton />
+        <NavigationButton />
+      </NavigationButtonWrapper>
       <NavigationTop>JunHyeok-Portfolio - Home.tsx</NavigationTop>
       <BreadCrumbWrapper>
         JunHyeok-Portfolio
