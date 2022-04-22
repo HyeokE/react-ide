@@ -9,10 +9,10 @@ const Layout = () => {
   return (
     <Routes>
       <Route path={'/*'} element={<AboutMe />} />
-      <Route path={'/projects'} element={<Projects />} />
-      <Route path={'/experience'} element={<Experience />} />
-      <Route path={'/communication'} element={<AboutMe />} />
-      <Route path={'/contact'} element={<Contact />} />
+      <Route path={'/projects/*'} element={<Projects />} />
+      <Route path={'/experience/*'} element={<Experience />} />
+      <Route path={'/communication/*'} element={<AboutMe />} />
+      <Route path={'/contact/*'} element={<Contact />} />
     </Routes>
   );
 };
