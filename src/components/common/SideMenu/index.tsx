@@ -21,9 +21,11 @@ const ProjectName = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const License = styled.div`
+const License = styled.a`
+  position: absolute;
   color: ${({ theme }) => theme.colors.grey400};
-  font-size: ${({ theme }) => theme.fontSize.body1};
+  font-size: ${({ theme }) => theme.fontSize.body3};
+  bottom: 5px;
 `;
 
 const SideMenu = () => {
@@ -33,7 +35,9 @@ const SideMenu = () => {
       {directoryStructure.map((data, id) => (
         <Directory key={id} {...data} />
       ))}
-      <License>© 2022. JunHyeok</License>
+      <License href={'https://github.com/HyeokE/react-ide'}>
+        ©2022. JunHyeok
+      </License>
     </SideMenuWrapper>
   );
 };
