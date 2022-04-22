@@ -11,6 +11,11 @@ const FileWrapper = styled.div`
   flex-direction: row;
   cursor: pointer;
   user-select: none;
+  &:hover {
+    background: #30363f;
+    color: ${({ theme }) => theme.colors.white};
+    border-radius: 5px;
+  }
 `;
 
 const FileImage = styled.img`

@@ -12,6 +12,11 @@ const SideComponent = styled.div`
   align-items: center;
   cursor: pointer;
   user-select: none;
+  &:hover {
+    background: #30363f;
+    color: ${({ theme }) => theme.colors.white};
+    border-radius: 5px;
+  }
 `;
 const ArrowImage = styled.img<{ isOpen: boolean }>`
   padding: 0 10px;
@@ -32,22 +37,20 @@ const Directory: React.FC<{
   fileInfo: string[];
   folderColor: string;
 }> = ({ folderName, fileInfo, folderColor }) => {
-  const location = useLocation();
-  const path = location.pathname.includes(folderName.toLowerCase());
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <SideComponent
         onClick={() => {
-          navigate(`/${folderName.toLowerCase()}`);
+          setIsOpen(!isOpen);
         }}
       >
-        <ArrowImage src={Arrow} isOpen={path} />
+        <ArrowImage src={Arrow} isOpen={isOpen} />
         <Folder color={folderColor} />
         {folderName}
       </SideComponent>
       <FileWrapper>
-        {path &&
+        {isOpen &&
           fileInfo.map((data, id) => (
             <File FileName={data} key={id} folderName={folderName} />
           ))}
