@@ -5,7 +5,7 @@
 ![Screen Shot 2022-04-22 at 11 50 52 PM](https://user-images.githubusercontent.com/61281239/164739322-d10c9310-f498-4615-b9b9-aaab16c41328.png)
 
 
-
+> ☆ 좌측 하단의 출처는 삭제하지 말아주세요.
 
 ## Getting started
 ```angular2html
@@ -20,6 +20,8 @@ yarn start
 ```angular2html
 yarn build
 ```
+
+
 
 ## Setting
 
