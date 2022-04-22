@@ -60,3 +60,13 @@ export const directoryStructure = [
 ```
 route는 위 설명처럼 react와 동일하게 설정하시면 됩니다.
 
+### 3. 파일 아이콘 지정
+
+`components/File`에서 파일 아이콘을 설정할 수 있습니다.
+
+```js
+<FileImage src={TypeScript} />
+```
+
+`src`를 변경해주세요.
+
