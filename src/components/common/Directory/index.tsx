@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import File from '../File';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Folder from '../../../assets/Folder';
+import { theme } from '../../../styles/theme';
 const SideComponent = styled.div`
   font-size: ${({ theme }) => theme.fontSize.body1};
   padding: 10px 0;
@@ -26,10 +27,11 @@ const FileWrapper = styled.section`
   flex-direction: column;
 `;
 
-const Directory: React.FC<{ folderName: string; fileInfo: string[] }> = ({
-  folderName,
-  fileInfo,
-}) => {
+const Directory: React.FC<{
+  folderName: string;
+  fileInfo: string[];
+  folderColor: string;
+}> = ({ folderName, fileInfo, folderColor }) => {
   const location = useLocation();
   const path = location.pathname.includes(folderName.toLowerCase());
   const navigate = useNavigate();
@@ -41,7 +43,7 @@ const Directory: React.FC<{ folderName: string; fileInfo: string[] }> = ({
         }}
       >
         <ArrowImage src={Arrow} isOpen={path} />
-        <Folder color={'#fff'} />
+        <Folder color={folderColor} />
         {folderName}
       </SideComponent>
       <FileWrapper>
